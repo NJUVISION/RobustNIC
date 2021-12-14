@@ -20,7 +20,7 @@
 
     <div id="header" class="container-fluid">
         <div class="row">
-            <h1>Decoder-side Cross Resolution Synthesis for Video Compression Enhancement</h1>
+            <h1>Towards Robust Neural Image Compression: Adversarial Attack and Model Finetuning</h1>
             <div class="authors">
                 <a href="https://tongxyh.github.io", target="_blank">Tong Chen</a> <sup>1</sup>, 
                 <a href="https://vision.nju.edu.cn/fc/d3/c29470a457939/page.htm", target="_blank">Zhan Ma</a> <sup>1</sup>
@@ -45,9 +45,13 @@
     <div class="container" id="abstractdiv">
         <h2>Abstract</h2>
         <p>
-            This paper proposes a decoder-side Cross Resolution Synthesis (CRS) module to pursue better compression efficiency beyond the latest Versatile Video Coding (VVC), where we encode intra frames at original high resolution (HR),  compress inter frames at a lower resolution (LR), and then super-resolve decoded LR inter frames with the help from preceding HR intra and neighboring LR inter frames.
-            For a LR inter frame, a motion alignment and aggregation network (MAN) is devised to produce temporally aggregated motion representation to best guarantee the temporal smoothness; Another texture compensation network (TCN) is utilized to generate texture representation from decoded HR intra frame for better augmenting spatial details; Finally, a similarity-driven fusion engine synthesizes motion and texture representations to upscale LR inter frames for the removal of compression and resolution re-sampling noises.
-            We enhance the VVC using proposed CRS, showing averaged 8.76% and 11.93% Bjøntegaard Delta Rate (BD-Rate) gains against the latest VVC anchor in Random Access (RA) and Low-delay P (LDP) settings respectively. In addition, experimental comparisons to the state-of-the-art super-resolution (SR) based VVC enhancement methods, and ablation studies are conducted to further report superior efficiency and generalization of the proposed algorithm. All materials will be made to public at \url{https://njuvision.github.io/CRS} for reproducible research.    
+            Deep neural network based image compression has been extensively studied. Model robustness is largely overlooked, though it is crucial to service enabling. We perform the adver-
+sarial attack by injecting a small amount of noise perturbation to original source images, and then encode these adversarial examples using prevailing learnt image compression models.
+Experiments report severe distortion in the reconstruction of adversarial examples, revealing the general vulnerability of existing methods, regardless of the settings used in underlying compression model (e.g., network architecture, loss function,
+quality scale) and optimization strategy used for injecting perturbation (e.g., noise threshold, signal distance measurement).
+Later, we apply the iterative adversarial finetuning to refine pretrained models. In each iteration, random source images and
+adversarial examples are mixed to update underlying model. Results show the effectiveness of the proposed finetuning strategy by substantially improving the compression model robustness.
+Overall, our methodology is simple, effective, and generalizable, making it attractive and useful for developing robust learnt image compression solution.
         </p>
     </div>
     
