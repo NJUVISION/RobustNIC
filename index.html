@@ -65,7 +65,11 @@ Overall, our methodology is simple, effective, and generalizable, making it attr
               <th>Methods</th> <th>PSNR (dB)</th> <th>MS-SSIM</th>
             </tr>
             <tr>
-              <td>Baseline Model (Balle 2018 MS-SSIM opt.)</td>
+                <td>Baseline Model (Balle 2018 MS-SSIM opt.) Random Noise</td>
+                <td>27.0911</td> <td>0.9670</td>
+              </tr>            
+            <tr>
+              <td>Baseline Model (Balle 2018 MS-SSIM opt.) Adversarial</td>
               <td>11.6085</td> <td>0.6752</td>
             </tr>
             <tr>
@@ -73,8 +77,20 @@ Overall, our methodology is simple, effective, and generalizable, making it attr
                 <td>23.7074</td> <td>0.9064</td>
               </tr>            
         </table>
-        <div id="comparison_source">
+
+        <!-- <div id="comparison_source">
             <div class="row" style="text-align: center;">
+                <h3>Before and After Adversarial Finetuning.</h3>
+                <img src="src/baseline_in_adv.png">
+                <img src="src/baseline_out_adv.png">
+            </div>
+        </div>         -->
+        <div id="comparison_source">
+            <div class="row" style="text-align: left;">
+                <h3>More results on all 24 Kodak images can be downloaded here:</h3>
+                <a href="https://box.nju.edu.cn/f/42ff2af3274f4988ad70/?dl=1">kodak-adv-hyper-3-msim-baseline.zip</a>
+                <br>
+                kodak-adv-hyper-3-mse-baseline.zip
                 <h3>You can already get access to the code now &#8595.</h3>
                 <!-- <img src="src/xxx.png"> -->
             </div>
